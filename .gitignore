@@ -1,0 +1,17 @@
+# .env variables
+.env
+
+#.venv - virtual interpreter
+/.venv
+
+# Pycharm folder
+/.idea
+
+# Class Jupyter Notebooks
+/Course_Jupyter_Notebooks/
+
+# Ignore support files
+/Support_Files/
+
+# Ignore the image folder
+/Lesson_Notes_Images/

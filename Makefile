@@ -1,0 +1,1 @@
+install-deps :; pip install virtualenv && pip install python-dotenv && pip install numpy && pip install pandas && pip install matplotlib && pip install scikit-learn
