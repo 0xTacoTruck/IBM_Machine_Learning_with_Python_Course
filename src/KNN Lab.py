@@ -17,7 +17,7 @@ load_dotenv()
 
 #Local filepath to use
                     #Use double slashes to escape the special characters being detected
-knn_dataset_filepath = "C:\\Programming Projects\\Machine Learning\\IBM Ai Engineering\\Machine Learning with Python\\Support Files\\teleCust1000t.csv"
+knn_dataset_filepath = "C:\\Programming Projects\\Machine Learning\\IBM Ai Engineering\\Machine Learning with Python\\Support_Files\\teleCust1000t.csv"
 
 if os.path.exists(knn_dataset_filepath):
     df = pd.read_csv(knn_dataset_filepath)
@@ -28,10 +28,15 @@ else:
     knn_dataset_url = os.getenv("KNN_DATASET_URL")
     df = pd.read_csv(knn_dataset_url)
 
+print(df.dtypes)
+print("\n")
+print("\n")
 
-df.head()
+#Print the top lines of the CSV file we turned into a data frame to confrim its loaded
 
 print(df.head())
+print("\n")
+print("\n")
 
 
 
@@ -43,12 +48,18 @@ print("Count of unique labels in 'custcat' field: ",df['custcat'].value_counts()
     4    236
     2    217
     Name: custcat, dtype: int64"""
+print("\n")
+print("\n")
 
 #Print columns of dataframe/dataset
 print("Dataframe Colums: ",df.columns)
+print("\n")
+print("\n")
 
 # Get descriptive statistics of income column
 print(df['income'].describe())
+print("\n")
+print("\n")
 
 # Display histogram to show the data distribution - column is the column to be plotted, bins is the size of the interval/width of the bars in the histogram
 df.hist(column='income', grid=True,bins=50)
@@ -70,12 +81,16 @@ X_values = df[['region', 'tenure','age', 'marital', 'address', 'income', 'ed', '
 
 #Print the first 5 rows to confirm the conversion and ensure the data is in the correct format
 print(X_values[0:5])
+print("\n")
+
 
 # Get our datset's Y values (Target values)
 Y_values = df['custcat'].values
 
 #Print the first 5 rows to confirm the conversion and ensure the data is in the correct format
 print(Y_values[0:5])
+print("\n")
+
 
 # Normalise Data
 # Standardise features/columns by removing the mean and scaling to unit variance
@@ -98,6 +113,7 @@ X_values = preprocessing.StandardScaler().fit(X_values).transform(X_values.astyp
 
 #Display the first 5 rows to confirm the conversion and ensure the data is in the correct format
 print(X_values[0:5])
+print("\n")
 
 
 """
@@ -124,6 +140,8 @@ https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsCl
 trained_neighbours = KNeighborsClassifier(n_neighbors = k_value).fit(X_train,y_train)
 
 print("Trained Model: ", trained_neighbours)
+print("\n")
+print("\n")
 
 #Predict Y values of test set
 predicted_y_values = trained_neighbours.predict(X_test)

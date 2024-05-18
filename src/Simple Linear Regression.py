@@ -7,24 +7,36 @@ from sklearn import linear_model
 from sklearn import metrics
 
 import os
-print("Current working directory is: " + os.getcwd())
+print("Current working directory is: ", os.getcwd())
+print("\n")
+print("\n")
 
 
 #Create a pandas data frame from the CSV file
 #df = pd.read_csv("Machine Learning with Python\Support Files\FuelConsumption.csv")
-df = pd.read_csv("C:\Programming Projects\Machine Learning\IBM Ai Engineering\Machine Learning with Python\Support Files\FuelConsumption.csv")
+df = pd.read_csv("C:\Programming Projects\Machine Learning\IBM Ai Engineering\Machine Learning with Python\Support_Files\FuelConsumption.csv")
+
+print(df.dtypes)
+print("\n")
+print("\n")
 
 #Print the top lines of the CSV file we turned into a data frame to confrim its loaded
 print(df.head())
+print("\n")
+print("\n")
 
 #Use the dataframe function 'describe()' to give us a quick desciptive summary of the data
 print(df.describe())
+print("\n")
+print("\n")
 
 #Create a data frame with only the columns we are interested in looking at: Engine size, cylinders, combined fuels consumption, CO2 emissions
 modified_df = df[['ENGINESIZE',"CYLINDERS","FUELCONSUMPTION_COMB","CO2EMISSIONS"]]
 
 #print the top 9 rows of modified dataframe to confirm selection
 print(modified_df.head(9))
+print("\n")
+print("\n")
 
 #Create histograms for the columns we decided upon for our modified data frame
 modified_df.hist()
@@ -142,6 +154,8 @@ my_coef = regression.coef_
 print("My Coefficients: ",my_coef)
 my_intercept = regression.intercept_
 print("My Intercept: ",my_intercept)
+print("\n")
+print("\n")
 
 #Create scatter plot graph showing engine size against the amount of CO2 emisisons produced
 plt.scatter(training_set.ENGINESIZE, training_set.CO2EMISSIONS,  color='blue')

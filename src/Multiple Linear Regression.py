@@ -13,9 +13,16 @@ from sklearn import linear_model
 
 #create dataframe of our data
 #init_df = pd.read_csv("Machine Learning with Python\Support Files\FuelConsumption.csv")
-init_df = pd.read_csv("C:\Programming Projects\Machine Learning\IBM Ai Engineering\Machine Learning with Python\Support Files\FuelConsumption.csv")
+init_df = pd.read_csv("C:\Programming Projects\Machine Learning\IBM Ai Engineering\Machine Learning with Python\Support_Files\FuelConsumption.csv")
+
+print(init_df.dtypes)
+print("\n")
+print("\n")
+
 #Preview data
 print(init_df.head())
+print("\n")
+print("\n")
 
 #Practise plotting - plot the CO2 emisisons against the engine size
 plt.scatter(init_df.ENGINESIZE, init_df.CO2EMISSIONS,  color='blue')
@@ -50,6 +57,8 @@ regr.fit (train_x, train_y)
 
 #print the cooefficients
 print('Coefficients: ', regr.coef_)
+print("\n")
+print("\n")
 
 """
 __Coefficient__ and __Intercept__  are the parameters of the fitted line. 

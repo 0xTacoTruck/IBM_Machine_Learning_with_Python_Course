@@ -24,7 +24,7 @@ This file contains the notes I have taken during the course. I decided to add my
 - process of predicting a continuous value
 - Looks at independent variables (explanatory or causal) and how they impact the final state/goal/metric we try and predict
 
-![Overview](<Lesson Notes Images/Regression/overview.png>)
+![Overview](<Lesson_Notes_Images/Regression/overview.png>)
 
 - The dependent variable - or goal we try and predict has to be continuous, however, the independent variables can be continuous or categorical values
 
@@ -62,7 +62,7 @@ This file contains the notes I have taken during the course. I decided to add my
 - We can look at independent variables and identify one that we want to see if there is a linear relationship to the dependent variable we want to be able to predict
 - For instance, we can plot the engine size of cars against the amount of CO2 emissions to see if there is a linear relationship
 
-![Simple Linear Regression Overview](<Lesson Notes Images/Regression/simple_Linear_Regression_Overview.png>)
+![Simple Linear Regression Overview](<Lesson_Notes_Images/Regression/simple_Linear_Regression_Overview.png>)
 
 - In the image above, we can see that as the engine size increases, there is an increase in the amount of CO2 emissions and we can draw a line through our data.
 - If the line we draw is accurate and a good measure of our data, we can use it to build a model to predict the amount of CO2 based upon an engine size
@@ -115,11 +115,11 @@ $$ \large \theta_0 = \bar{y} -\theta_1 \bar{x} $$
 
 - $\large \theta_0$ (theta 0) equation is much easier to understand once you have grasped the $\large \theta_1$ equation - This equation asks us for the AVERAGE of the y values, MINUS the $\large \theta_1$ value from its equation, MULTIPLIED by the AVERAGE value of x values
 
-![Estimate Params](<Lesson Notes Images/Regression/theta_estimate_params.png>)
+![Estimate Params](<Lesson_Notes_Images/Regression/theta_estimate_params.png>)
 
 - We can then make a prediction of our dependent variable based upon the independent variable and use the equations shown above
 
-![Prediction with linear regression](<Lesson Notes Images/Regression/predict_with_params_simple.png>)
+![Prediction with linear regression](<Lesson_Notes_Images/Regression/predict_with_params_simple.png>)
 
 ## Pros of linear regression
 
@@ -140,7 +140,7 @@ $$ \large \theta_0 = \bar{y} -\theta_1 \bar{x} $$
   - With those independent variables, we then pass that into our model to carry out the predictions and compare the result to the ACTUAL values of the dependent variable
   - This will indicate how accurate our model actually is
 
-![Model Evaluation](<Lesson Notes Images/Regression/simple_lin_model_eval.png>)
+![Model Evaluation](<Lesson_Notes_Images/Regression/simple_lin_model_eval.png>)
 
 ### Considerations of train and test on the same data set
 
@@ -178,16 +178,16 @@ $$ \large \theta_0 = \bar{y} -\theta_1 \bar{x} $$
 - This allows us to train our model on the data we have but at the same time reserving some of the data to be tested on as out-of-sample
 - This allows us to carry out accuracy tests, like the error metric discussed before
 
-![Train/Test Split](<Lesson Notes Images/Regression/simp_lin_test_split.png>)
+![Train/Test Split](<Lesson_Notes_Images/Regression/simp_lin_test_split.png>)
 
-![Train/Test Evaluation Approach](<Lesson Notes Images/Regression/simp_lin_test_split_eval.png>)
+![Train/Test Evaluation Approach](<Lesson_Notes_Images/Regression/simp_lin_test_split_eval.png>)
 
 ## K-Fold Cross-Validation and how to use it
 
 - Set aside a percentage of the dataset to use for testing (e.g. first 25%), use the rest for training, then use the next group of percentage for testing and use the rest for training, keep repeating
   - Record the accuracy for each grouped testing, which can be used to calculate the average score
 
-![K-Fold Approach](<Lesson Notes Images/Regression/k-cross-fold-approach.png>)
+![K-Fold Approach](<Lesson_Notes_Images/Regression/k-cross-fold-approach.png>)
 
 - Each fold is unique, where no training data used in one fold is used in another
 - This method is essentially multiple rounds of Train/Test Split using the same dataset where each split is different
@@ -205,7 +205,7 @@ $$ \large \theta_0 = \bar{y} -\theta_1 \bar{x} $$
 
 - Error: measure of how far the data is from the fitted regression(trend) line
 
-![What is Error of Model](<Lesson Notes Images/Regression/simpl_lin_error_model.png>)
+![What is Error of Model](<Lesson_Notes_Images/Regression/simpl_lin_error_model.png>)
 
 <br/>
 
@@ -287,12 +287,12 @@ $$\large R^2 = 1-RSE $$
     - $\huge \widehat y=0^TX$
     - $\large \theta ^T$ = Theta transposed
 
-![Multiple Regression Theta Transposed](<Lesson Notes Images/Regression/multiple_regr_theta_transposed.png>)
+![Multiple Regression Theta Transposed](<Lesson_Notes_Images/Regression/multiple_regr_theta_transposed.png>)
 
 - X = the feature set. Being the components of the data. E.g X1 = engine size, X2 = num of cylinders, etc.
   - The first element of the feature set is set to 1 because it turns the theta zero into the intercept or bias parameter
 
-![Multiple Regression X values Vector](<Lesson Notes Images/Regression/multiple_regr_x_values.png>)
+![Multiple Regression X values Vector](<Lesson_Notes_Images/Regression/multiple_regr_x_values.png>)
 
 - When $\large \theta ^TX$ is in a 1 dimensional space it is an equation of a line (like simple linear regression)
   - In higher dimension, where we have more than 1 input, the line is called a plane or a hyper plane and this is what is used for multiple linear regression
@@ -314,20 +314,20 @@ $$\large R^2 = 1-RSE $$
 - We will work through using MSE to calculate errors, with the assumption we have already solved $\theta$ (theta) vector values
 - We can then use the feature sets (x values) to predict the dependent variable (y value) for a car
 
-![Multiple Regression Demo Data](<Lesson Notes Images/Regression/mult_lin_regr_start_data.png>)
+![Multiple Regression Demo Data](<Lesson_Notes_Images/Regression/mult_lin_regr_start_data.png>)
 
 - If we plug the feature sets values into our equation we find $\large \widehat y$ (predicted value)
 
-![Multiple Regression Demo Y Predicted](<Lesson Notes Images/Regression/mult_lin_regr_demo_y_pred.png>)
+![Multiple Regression Demo Y Predicted](<Lesson_Notes_Images/Regression/mult_lin_regr_demo_y_pred.png>)
 
 - We can then compare the ACTUAL value of $\large y_i$
 
-![Multiple Regression Demo Y Actual](<Lesson Notes Images/Regression/mult_lin_regr_demo_y_actual.png>)
+![Multiple Regression Demo Y Actual](<Lesson_Notes_Images/Regression/mult_lin_regr_demo_y_actual.png>)
 
 - We then find how DIFFERENT the predicted value is from the actual value (**residual error**)
   - $\large y_i -\widehat y_i$
 
-![Multiple Regression Demo Actual vs Predicted](<Lesson Notes Images/Regression/mult_lin_regr_demo_y_actual_vs_pred.png>)
+![Multiple Regression Demo Actual vs Predicted](<Lesson_Notes_Images/Regression/mult_lin_regr_demo_y_actual_vs_pred.png>)
 
 - The mean of all residual errors (for each row of x and y values) can show how bad the model is representing the data set - This is called the Mean Squared Error → which was discussed briefly earlier
 
@@ -361,7 +361,7 @@ $$\large Mean\space Squared\space Error(MSE)=\frac{1}{n} \displaystyle\sum_{j=1}
 
 ## Making Predictions with multiple linear regression after finding optimised parameters
 
-![Multiple Regression Making Predictions](<Lesson Notes Images/Regression/mult_lin_regr_pred_post_optim_params.png>)
+![Multiple Regression Making Predictions](<Lesson_Notes_Images/Regression/mult_lin_regr_pred_post_optim_params.png>)
 
 - The values identified for each $\large \theta_i$ (e.g. theta 0, theta 1, etc, etc) indicate the predicted impact of that variable on the dependent variable
   - So looking at the example above, it shows that the number of cylinders has a higher impact on the prediction compared to the engine size
@@ -402,7 +402,7 @@ $$\large Mean\space Squared\space Error(MSE)=\frac{1}{n} \displaystyle\sum_{j=1}
 
 Classification determines the class label for an unlabelled test case
 
-![Classification OVerview](<Lesson Notes Images/K-Nearest Neighbours - Classification/classification_overview_1.PNG>)
+![Classification OVerview](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/classification_overview_1.PNG>)
 
 ## Demonstration - Bank wanting to know if loans will be repaid - Binary classifier with 2 classes
 
@@ -410,7 +410,7 @@ We have a set of data of individuals that have previously defaulted on loans tha
 
 The goal of the model will be to predict whether the individual will default on the loan or not default on the loan. With this being represented as 1 or 0 in the targer variable column.
 
-![Bank Loan Default Model Demo](<Lesson Notes Images/K-Nearest Neighbours - Classification/bank_classification_demo_1.PNG>)
+![Bank Loan Default Model Demo](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/bank_classification_demo_1.PNG>)
 
 ## Multi-Class Classification
 
@@ -424,7 +424,7 @@ The the target value is the type of drug which is most appropriate for the indiv
 
 We can make a model that can predict what drug should be used for future patients of the same illness.
 
-![Multi-Class Classification Demo](<Lesson Notes Images/K-Nearest Neighbours - Classification/multi-class_demo_drugs_1.PNG>)
+![Multi-Class Classification Demo](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/multi-class_demo_drugs_1.PNG>)
 
 ## Classification Use Cases
 
@@ -446,7 +446,7 @@ It can cover areas such as:
 - document classification,
 - and so much more
 
-![Multi-Class Classification Use Cases](<Lesson Notes Images/K-Nearest Neighbours - Classification/multi-class_use_cases_1.PNG>)
+![Multi-Class Classification Use Cases](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/multi-class_use_cases_1.PNG>)
 
 ## Classification Algorithms in Machine Learning
 
@@ -472,15 +472,15 @@ It is based on the paradigm that similar cases with same classification labels a
 
 There are a number of ways to measure the similarity, or the dissimilarity. This includes using [Euclidian Distance, Manhattan Distance, Minkowski.](https://www.kdnuggets.com/2023/03/distance-metrics-euclidean-manhattan-minkowski-oh.html) (Click on the link to read more about these distances) .
 
-![Eucldian, Manhattan, Minkowski](<Lesson Notes Images/K-Nearest Neighbours - Classification/c_distance_metrics_euclidean_manhattan_minkowski.png>)
+![Eucldian, Manhattan, Minkowski](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/c_distance_metrics_euclidean_manhattan_minkowski.png>)
 
 ### Quick Process Overview
 
-![KNN Overview](<Lesson Notes Images/K-Nearest Neighbours - Classification/knn-intro-1.PNG>)
+![KNN Overview](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/knn-intro-1.PNG>)
 
 The process involves looking at the values of the specified independent variables (X values) of the case that we are wanting to predict on, and looking at the N-th (e.g. 1st) closest value in the matching X columns and seeing what value they have in the Y variable (dependent variable) to determine what classification our NEW case should have for the Y value.
 
-![KNN Intro Demo-1](<Lesson Notes Images/K-Nearest Neighbours - Classification/knn-intro-demo-1.PNG>)
+![KNN Intro Demo-1](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/knn-intro-demo-1.PNG>)
 
 ## KNN Algorithm
 
@@ -508,19 +508,19 @@ There is consideration to be given to how many neighbours to use in the algorith
 
 In this image, we are using K=1 and we can see that the 1st closest neighbour that matches our X values suggests that we should have our Y value = '4. Total Service'
 
-![KNN Intro Demo-1K](<Lesson Notes Images/K-Nearest Neighbours - Classification/knn-intro-demo-1.PNG>)
+![KNN Intro Demo-1K](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/knn-intro-demo-1.PNG>)
 
 However, if we use K=5 we find that the majority of the 5 closest neighbours in X values suggests a different Y value.
 
 Using K=5, we actually have the Y value = '3: Plus Service'. And this makes much more sense then trusting just the first closest.
 
-![KNN Intro Demo-5K](<Lesson Notes Images/K-Nearest Neighbours - Classification/knn-intro-demo-2.PNG>)
+![KNN Intro Demo-5K](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/knn-intro-demo-2.PNG>)
 
 ## Calculating the similarity/distance in a 1-dimesnional space
 
 We are calculating the distance/similarity between 2 customers with 1 feature (dimension) - being age. Using that data, we can use a few different equations to measure the distance.
 
-![Customer Data](<Lesson Notes Images/K-Nearest Neighbours - Classification/calc-sim-1-dim-data.PNG>)
+![Customer Data](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/calc-sim-1-dim-data.PNG>)
 
 ### Minkowski 1-Dimensional Space
 
@@ -549,7 +549,7 @@ Putting it all together, the equation calculates the similarity between the ages
 
 For this example, we still have 2 customers and their ages, however, we also now have their income.
 
-![2-Dimensions Cusotmer Data](<Lesson Notes Images/K-Nearest Neighbours - Classification/calc-sim-2-dim-data.PNG>)
+![2-Dimensions Cusotmer Data](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/calc-sim-2-dim-data.PNG>)
 
 I turns out, we can actually re-use the same Monkowski equation but for a 2 dimensional space.
 
@@ -588,7 +588,7 @@ We have laid the ground work to continue to scale up the number of dimensions.
 
 For this next example, we have 3 dimensions: Age, income, education.
 
-![3-Dimensions Customer Data](<Lesson Notes Images/K-Nearest Neighbours - Classification/calc-sim-3-dim-data.PNG>)
+![3-Dimensions Customer Data](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/calc-sim-3-dim-data.PNG>)
 
 $$\large Dis(x_1,x_2)=\sqrt {\sum^n_{1=0} (x_{1i} - x_{2i})^2}$$
 
@@ -637,11 +637,11 @@ $\widehat y$ = Predicted values/labels
 
 This method views the values of predicted values and actual values like a Venn diagram. Where the intersection of the predicted values circle and actual values circle represent the accuracy of the model.
 
-![Jaccard Venn Diagram](<Lesson Notes Images/K-Nearest Neighbours - Classification/jaccard-venn-overview-1.PNG>)
+![Jaccard Venn Diagram](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/jaccard-venn-overview-1.PNG>)
 
 The equation will produce an output ranging from 0.0, through to 1.0. Where a value of 1.0 is a perfect match and complete intersection of the two circles, while a score of 0.0 shows NO intersection of the two circles - meaning no matches at all.
 
-![Jaccard Venn Diagram vs Index](<Lesson Notes Images/K-Nearest Neighbours - Classification/jaccard-venn-scoring-overview.PNG>)
+![Jaccard Venn Diagram vs Index](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/jaccard-venn-scoring-overview.PNG>)
 
 ### Jaccard Index Equation
 
@@ -649,7 +649,7 @@ $$\large j(y,\widehat y) = \huge \frac{|y \cap \widehat y|}{|y \cup \widehat y|}
 
 <br/>
 
-![Jaccard Equation Demo](<Lesson Notes Images/K-Nearest Neighbours - Classification/jaccard-equation-demo-1.PNG>)
+![Jaccard Equation Demo](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/jaccard-equation-demo-1.PNG>)
 
 **Breakdown**
 
@@ -677,7 +677,7 @@ By dividing the size of the intersection by the size of the union, we get a meas
 
 **_The F1-score appraoch can be used for more than 2 labels (binary), however, this will not be covered in this course._**
 
-![F1-score Overview](<Lesson Notes Images/K-Nearest Neighbours - Classification/f1-score-overview.PNG>)
+![F1-score Overview](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/f1-score-overview.PNG>)
 
 The F1-score evaluation appraoch, represents the $y$ (actual) values as rows, and the $\widehat y$ (predicted) values as columns.
 
@@ -691,7 +691,7 @@ For example, looking at the confusion matrix above, we can see that for the chur
 
 Because we have correct predictions against correct values, as well as incorrect predicitons against real values - PLUS we are looking at it with binary of labels, we can convert each square in the matrix into the following:
 
-![F1-score Pos, Neg Labels](<Lesson Notes Images/K-Nearest Neighbours - Classification/f1-score-pos-neg-labels.PNG>)
+![F1-score Pos, Neg Labels](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/f1-score-pos-neg-labels.PNG>)
 
 **True Positive (TP):**
 
@@ -790,7 +790,7 @@ _Log loss measures the performance of a classifier where the predicted output is
 
 This can be helpful in assessing performance of the model prediction because, like in the example below, we may have predicited a label of '1' but the probaility of that case receiving the assinged label is very low - 0.13 in the image below. This indicates a high log loss.
 
-![Log Loss Demo](<Lesson Notes Images/K-Nearest Neighbours - Classification/log-loss-demo.PNG>)
+![Log Loss Demo](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/log-loss-demo.PNG>)
 
 ### Calculating the Log Loss
 
@@ -804,7 +804,7 @@ $$ \large LogLoss = - \frac{1}{n} \sum (y \times log(\widehat y)+(1-y)\times log
 
 <br/>
 
-![Logg Loss Equation Demo](<Lesson Notes Images/K-Nearest Neighbours - Classification/log-loss-equation-demo.PNG>)
+![Logg Loss Equation Demo](<Lesson_Notes_Images/K-Nearest Neighbours - Classification/log-loss-equation-demo.PNG>)
 
 
 # Decision Trees
@@ -815,7 +815,7 @@ Decision trees allow us to map out all decision paths leading to the classifier 
 
 
 
-![Decision Tree Intro Demo](<Lesson Notes Images/Decision-Trees/Demo-1.PNG>)
+![Decision Tree Intro Demo](<Lesson_Notes_Images/Decision-Trees/Demo-1.PNG>)
 
 The decision points are referred to as nodes and each **internal node** corresponds to a test - e.g Sex, Cholestrol
 
@@ -823,7 +823,7 @@ Each **branch** - The decision paths stemming from a node - corresponds to a res
 
 Each **Leaf Node** assigns a classifcation - e.g. Drug A, Drug B
 
-![Decision Tree Terminology Demo](<Lesson Notes Images/Decision-Trees/terminology-demo-2.PNG>)
+![Decision Tree Terminology Demo](<Lesson_Notes_Images/Decision-Trees/terminology-demo-2.PNG>)
 
 ## Decision Tree Learning Algorithm
 
@@ -838,14 +838,78 @@ Decision trees are built using recurssive partitioning to declassify the data. T
 
 What we are trying to do is find the attribute that BEST gives us insight into the classification that we want to predict is. For example, if we looked an attribute of 'Blood Pressure' and the classification we want to predict on is 'Drug' but when we split our data based upon 'Blood Pressure' and then examine the 'Drug' we see a fairly even distribution of 'Drug' then 'Blood Pressue' is not the best attribute to help us. However, if we split our data based on 'Sex' and we happen to see a significant lean on distribution of 'Drug' than that is a much better attribute.
 
-In the example image below, the Sex attribute value of Female gives us high certainty on the Drug to be assinged, however, its not as strong for Male Sex- but it is still a better attribute to use than something that had a near even spread of drug classification. We can call this **more pure** - there is a majority of a classifcation in the branches. We are looking for the best attributes to **decrease** the impurity in the leaves after splitting them up, based on that feature.
+In the example image below, the Sex attribute value of Female gives us high certainty on the Drug to be assinged, however, its not as strong for Male Sex- but it is still a better attribute to use than something that had a near even spread of drug classification. We can call this **more pure** - there is a majority of a classifcation in the branches. We are looking for the best attributes to **decrease** the impurity in the leaves after splitting them up, based on that feature - We want to reduce the ***Entropy** of the data (we cover what this means a little further down)
 
-![Best Attribute Demo](<Lesson Notes Images/Decision-Trees/best-attribute-demo-3.PNG>)
+![Best Attribute Demo](<Lesson_Notes_Images/Decision-Trees/best-attribute-demo-3.PNG>)
 
 We can then repeat this process for each path of the decision and look over the other features available to again help us split our data into the ***purest*** classification groupings we can.
 
 For example, if we use 'Cholesterol' feature, we can fully split our data in the purest form of drug classification of either Drug A or Drug B.
 
-![Repeating Process for Branches](<Lesson Notes Images/Decision-Trees/best-attribute-repeat-Step-in-Branch-demo-4.PNG>)
+![Repeating Process for Branches](<Lesson_Notes_Images/Decision-Trees/best-attribute-repeat-Step-in-Branch-demo-4.PNG>)
 
 A ***Pure Node*** is when the splitting of data based upon an attribute results in 100% assignment of target classification feature.
+
+## Entropy
+
+**Entropy** - Measure of randomness or uncertainty.
+
+The lower the Entropy, the less uniform the distribution, the purer the node. For decision trees, we are looking for attributes that have the smallest entropy in their nodes.
+We are able to calculate the Entropy value and that value can tell us about the purity of the node - an Entropy of 1 indicates even distibution, while 0 represents a pure. homogenous node.
+
+![Entropy Demo](Lesson_Notes_Images/Decision-Trees/entropy-demo-5.PNG)
+
+### Entropy Formula
+
+We can easily calculate the entropy value by using the frequencey table of the attribute through the entropy formula:
+
+$$
+Entropy = -p(A)log_2(p(A)) - p(B)log_2(p(B))
+$$
+
+$p$ = The proportion/ratio of the category - such as Drug A or Drug B
+
+As an example, lets calculate the entropy of the target variable before splitting it:
+
+![Entropy of Target Variable Before Splitting Demo](Lesson_Notes_Images/Decision-Trees/entropy-target-before-split-demo.PNG)
+
+We can then look at splitting by a feature/attribute and look for the entropy of that attribute when split. For example, if we look at the 'Cholestrol' feature it contains 2 values: Normal, High. For the 'Normal' values, there is 6 matched 'Drug B' and only 2 'Drug A' - which we can also plug into the Entropy formula. When we look at the distribution of Drugs for 'High' value of the 'Cholestrol' attribute, there are 3 'Drug A' and 3 'Drug B' matched values - which, when plugged into the Entropy formula - gives us an Entropy value of 1.00.
+
+![Entropy Calc of Attributes After Split](Lesson_Notes_Images/Decision-Trees/entropy-test-attributes-demo-1.PNG)
+
+We actually want to repeat what we just did with all the available attributes to help us determine the best attribute to use for splitting. For example, splitting by the 'Sex' attribute may be better. We can calculate the entropy of the 'Sex' attribute and compare the Entropy values against the 'Cholestrol' attribute where can assess ***what is a better attribute to split our dataset into 2 branches? OR in other words, What attribute results in more PURE nodes afterwards?***
+
+When we ask this question about this example dataset and these 2 attributes, the answer is ***the tree with the higher <u>Information Gain</u> after splitting***.
+
+![Entropy Calc of Attributes After Split](Lesson_Notes_Images/Decision-Trees/entropy-test-attributes-demo-2.PNG)
+
+#### Information Gain
+
+Information Gain is the information that can increase the level of certainty after splitting:
+
+$$
+Information Gain = (Entropy Before Split) - (Weighted Entropy After Split)
+$$
+
+We want to use the attribute that result in the **HIGHER** Information Gain value, which is what this formula will produce for us.
+
+In the example below, we can see the calculation being used for both the 'Sex' and 'Cholestrol' attributes. 
+
+***Weighted entropy after the split is calculated as***:
+
+$$
+Weighted \space Entropy = [(Proportion_A)Entropy_A + (Proportion_B)Entropy_B]
+$$
+
+$Demo: \space Weighted \space Entropy = [(7/14)0.985 +(7/14)0.592]$
+
+![Information Gain Demo](Lesson_Notes_Images/Decision-Trees/info-gain-demo-1.PNG)
+
+
+Fomr using the Information Gain equation, we can determine that the 'Sex' attribute results in a higher Information Gain score and therefore it is a better attribute to use to split our dataset.
+
+## What's Next after First Split?
+
+After doing this, we repeat the process again to find the next best attribute to use to split our data again for each branch, that achieves all the things we just did for the first split of our data.
+
+![Next Steps](Lesson_Notes_Images/Decision-Trees/build-decision-tree.PNG)
